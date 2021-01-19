@@ -1,0 +1,30 @@
+.m-state {
+    text-align: center;
+    background-color: #cfc;
+}
+
+.m-block {
+    background:#ccc;
+    height: 200px;
+    position: relative;
+}
+.m-blockItem {
+    background:#cfc;
+    /* margin: 0 auto; */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%)
+}
+
+.m-block1 {
+    background:#ccc;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-blockItem1  {
+    background:#cfc;
+    
+}
