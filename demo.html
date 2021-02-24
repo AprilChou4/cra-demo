@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        #myid { /* id选择器权重为100 */
+            background-color: pink;
+        }
+        #divid .myspan input { /* 权重为 100 + 10 + 1 = 111 */
+            background-color: yellow;
+        }
+        input[type="button"] { /* 权重为 10 */
+            color: white !important; /* !important权重为无穷大 */
+        }
+        input.myclass { /* 此为标签指定式选择器，权重为 1 + 10 = 11 */
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="divid">
+        <span class="myspan">
+            <input type="button" id="myid" class="myclass" name="myname"
+                value="点我" style=" color: green;">
+                <!-- style样式的权重为1000 -->
+        </span>
+    </div>
+</body>
+</html>
