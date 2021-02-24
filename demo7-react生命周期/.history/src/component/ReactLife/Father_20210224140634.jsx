@@ -27,15 +27,13 @@ class Father extends React.Component {
     console.log('----father----componentDidMount------');
     // this.setState({
     //   fatherAge: 123,
-    //   age: 25,
-    //   name: 'kings',
     // });
   }
   componentWillReceiveProps(nextProps) {
     console.log('----father----componentWillReceiveProps------');
   }
   // 应该使用这个方法，否则无论state是否有变化都将会导致组件重新渲染
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     console.log('----father----shouldComponentUpdate------');
     return true;
   }

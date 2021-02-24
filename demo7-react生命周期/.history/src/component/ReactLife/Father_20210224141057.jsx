@@ -25,11 +25,11 @@ class Father extends React.Component {
 
   componentDidMount() {
     console.log('----father----componentDidMount------');
-    // this.setState({
-    //   fatherAge: 123,
-    //   age: 25,
-    //   name: 'kings',
-    // });
+    this.setState({
+      fatherAge: 123,
+      age: 25,
+      name: 'kings',
+    });
   }
   componentWillReceiveProps(nextProps) {
     console.log('----father----componentWillReceiveProps------');

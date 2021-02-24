@@ -1,0 +1,32 @@
+import React, { Component } from 'react';
+class Child extends Component {
+  componentWillMount() {
+    console.log('----child----componentWillMount------');
+  }
+  componentDidMount() {
+    console.log('----child----componentDidMount------');
+  }
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps,'----child----componentWillReceiveProps------');
+  }
+  shouldComponentUpdate(nextProps) {
+    console.log('----child----shouldComponentUpdate------');
+    return true;
+  }
+  render() {
+    const { name, age } = this.props;
+    console.log(name, age, '----child----render------');
+
+    return (
+      <div>
+        <h3>
+          我是child组件
+          <div>
+            我叫:{name},今年{age}岁
+          </div>
+        </h3>
+      </div>
+    );
+  }
+}
+export default Child;

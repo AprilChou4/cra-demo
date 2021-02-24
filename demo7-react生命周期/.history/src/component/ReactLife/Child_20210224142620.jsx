@@ -17,7 +17,7 @@ class Child extends Component {
         // 函数防抖
         clearTimeout(this.timer);
         this.timer = setTimeout(() => {
-          console.log('timer')
+          console.log('dsadas')
         }, 100);
       }),
     );
@@ -47,7 +47,6 @@ class Child extends Component {
     // 此方法在组件被卸载前调用，可以在这里执行一些清理工作，比如清楚组件中使用的定时器，清楚componentDidMount中手动创建的DOM元素等，以避免引起内存泄漏。
     window.removeEventListener('resize', this.resize);
     clearTimeout(this.timer);
-    alert(111)
   }
   render() {
     const { name, age } = this.props;

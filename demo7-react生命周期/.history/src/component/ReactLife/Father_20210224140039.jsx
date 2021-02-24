@@ -15,7 +15,6 @@ class Father extends React.Component {
     };
   }
 
-  // 在组件挂载到DOM前调用，且只会被调用一次，在这边调用this.setState不会引起组件重新渲染，也可以把写在这边的内容提前到constructor()中，所以项目中很少用。
   componentWillMount() {
     console.log('----father----componentWillMount------');
     this.setState({
@@ -25,17 +24,14 @@ class Father extends React.Component {
 
   componentDidMount() {
     console.log('----father----componentDidMount------');
-    // this.setState({
-    //   fatherAge: 123,
-    //   age: 25,
-    //   name: 'kings',
-    // });
+    this.setState({
+      fatherAge: 123,
+    });
   }
   componentWillReceiveProps(nextProps) {
     console.log('----father----componentWillReceiveProps------');
   }
-  // 应该使用这个方法，否则无论state是否有变化都将会导致组件重新渲染
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     console.log('----father----shouldComponentUpdate------');
     return true;
   }
