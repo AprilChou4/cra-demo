@@ -14,7 +14,6 @@ class Father extends React.Component {
       age: 24,
       name: 'king',
     };
-    this.handle=this.handle.bind(this)
   }
   static getDerivedStateFromProps(nextProps,prevState) {
     // console.log(this, '----father----getDerivedStateFromProps------nextProps');
@@ -29,9 +28,6 @@ class Father extends React.Component {
 
   componentDidMount() {
     
-   document.getElementById('father').addEventListener('click',this.handle)
-  }
-  handle(){
     this.setState({
       fatherAge: 123,
     },()=>{
@@ -59,7 +55,7 @@ class Father extends React.Component {
     console.log(this.state,'----father----render------');
     return (
       <div className="app">
-        <h1 id="father"> 我是父组件{fatherAge}</h1>
+        <h1 onClick={()=>{alert(11)}}> 我是父组件{fatherAge}</h1>
         <Child name={name} age={age} />
         <Snapshot/>
       </div>

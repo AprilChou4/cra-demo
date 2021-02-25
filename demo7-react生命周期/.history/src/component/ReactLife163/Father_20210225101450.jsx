@@ -29,7 +29,8 @@ class Father extends React.Component {
 
   componentDidMount() {
     
-   document.getElementById('father').addEventListener('click',this.handle)
+   this.handle()
+   document.getElementById('')
   }
   handle(){
     this.setState({

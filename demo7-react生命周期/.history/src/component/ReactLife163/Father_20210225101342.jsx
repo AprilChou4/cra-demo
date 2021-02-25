@@ -29,7 +29,7 @@ class Father extends React.Component {
 
   componentDidMount() {
     
-   document.getElementById('father').addEventListener('click',this.handle)
+   this.handle()
   }
   handle(){
     this.setState({
@@ -59,7 +59,7 @@ class Father extends React.Component {
     console.log(this.state,'----father----render------');
     return (
       <div className="app">
-        <h1 id="father"> 我是父组件{fatherAge}</h1>
+        <h1 onClick={()=>{alert(11)}}> 我是父组件{fatherAge}</h1>
         <Child name={name} age={age} />
         <Snapshot/>
       </div>

@@ -29,7 +29,20 @@ class Father extends React.Component {
 
   componentDidMount() {
     
-   document.getElementById('father').addEventListener('click',this.handle)
+    this.setState({
+      fatherAge: 123,
+    },()=>{
+      console.log('setState1==========',this.state.fatherAge)
+    });
+    console.log('setState1==========后',this.state.fatherAge)
+
+    this.setState({
+      fatherAge: 124,
+    },()=>{
+      console.log('setState2==========',this.state.fatherAge)
+
+    });
+    console.log('setState2==========后',this.state.fatherAge)
   }
   handle(){
     this.setState({
@@ -59,7 +72,7 @@ class Father extends React.Component {
     console.log(this.state,'----father----render------');
     return (
       <div className="app">
-        <h1 id="father"> 我是父组件{fatherAge}</h1>
+        <h1 onClick={()=>{alert(11)}}> 我是父组件{fatherAge}</h1>
         <Child name={name} age={age} />
         <Snapshot/>
       </div>
