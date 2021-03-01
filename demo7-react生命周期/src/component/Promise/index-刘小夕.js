@@ -57,7 +57,7 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
     let promise2 = new Promise((resolve, reject) => {
         if (self.status === FULFILLED) {
             //PromiseA+ 2.2.2
-            //PromiseA+ 2.2.4 --- setTimeout
+            //PromiseA+ 2.2.4 --- setTimeout es5实现版本都是这样，setTimeout 当做异步去模拟，浏览器下没办法创造真正的微任务，知道运行机制即可。
             setTimeout(() => {
                 try {
                     //PromiseA+ 2.2.7.1
@@ -145,5 +145,12 @@ function resolvePromise(promise2, x, resolve, reject) {
         resolve(x);
     }
 }
-
+Promise.defer = Promise.deferred = function () {
+    let dfd = {};
+    dfd.promise = new Promise((resolve, reject) => {
+        dfd.resolve = resolve;
+        dfd.reject = reject;
+    });
+    return dfd;
+}
 module.exports = Promise;
