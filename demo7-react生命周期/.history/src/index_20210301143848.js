@@ -9,7 +9,7 @@ import './index.css';
 // import App from './component/PureComponent';
 // import App from './component/ReactMemo';
 import App from './component/Portals';
-// import './component/Promise'
+import './component/Promise'
 import './component/new'
 
 
