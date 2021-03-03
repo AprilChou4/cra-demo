@@ -70,11 +70,11 @@ class Parent extends React.Component {
        is not a child of the div
        with the onClick handler.
      </p>
-      <Modal>
-        <Child />
-      </Modal>
+     
    </div>
-   </>
+   <Modal>
+   {/* <Child /> */}
+ </Modal></>
     );
   }
 }

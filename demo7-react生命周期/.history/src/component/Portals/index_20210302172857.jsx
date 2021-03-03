@@ -55,6 +55,7 @@ class Parent extends React.Component {
     // 当子元素里的按钮被点击时，
     // 这个将会被触发更新父元素的 state，
     // 即使这个按钮在 DOM 中不是直接关联的后代
+    alert(11)
     this.setState(state => ({
       clicks: state.clicks + 1
     }));
@@ -70,11 +71,11 @@ class Parent extends React.Component {
        is not a child of the div
        with the onClick handler.
      </p>
-      <Modal>
-        <Child />
-      </Modal>
+     
    </div>
-   </>
+   <Modal>
+   <Child />
+ </Modal></>
     );
   }
 }
