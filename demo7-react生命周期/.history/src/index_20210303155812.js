@@ -13,8 +13,8 @@ import App from './component/Portals';
 // import './component/new'
 // 继承
 // import './component/inherit'
-// 手写call bind
-import './component/call'
+// 
+import './component/call、bind'
 
 ReactDOM.render(
   // <React.StrictMode>
