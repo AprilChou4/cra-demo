@@ -16,7 +16,7 @@ import App from './component/getSnapshotBeforeUpdate';
 // 继承
 // import './component/inherit'
 // 手写call bind
-// import './component/call'
+import './component/call'
 
 ReactDOM.render(
   // <React.StrictMode>
