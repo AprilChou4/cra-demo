@@ -12,19 +12,19 @@ class Index extends React.Component {
             this.setState({
                 name:'111'
             })
-            console.log('111111')
         });  
-         this.setState({
-                name:'111'
-            })
     }
         
        
     componentDidMount() {
-        // this.setState({
-        //     name:'2222'
-        // })
-        console.log('2222222')
+        // Promise.resolve().then(() => {
+        //     this.setState({
+        //         name:'333'
+        //     })
+        // });  
+        this.setState({
+            name:'2222'
+        })
         
     }
         

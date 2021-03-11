@@ -10,15 +10,14 @@ import './index.css';
 // import App from './component/ReactMemo';
 // import App from './component/Portals';
 // getSnapshotBeforeUpdate应用场景
-// import App from './component/getSnapshotBeforeUpdate';
+import App from './component/getSnapshotBeforeUpdate';
 // import './component/Promise'
 // import './component/new'
 // 继承
 // import './component/inherit'
 // 手写call bind
 // import './component/call'
-import App from './component/float';
-
+import './component/float'
 
 
 ReactDOM.render(

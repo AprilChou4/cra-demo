@@ -13,37 +13,27 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>React App</title>
     <style type="text/css">
-      img {
-        background-color: antiquewhite;
-      }
-      img:last-child{
-        background-color: aquamarine;
-      }
       .left {
-        height:100px;
+        height:10px;
         width:200px;
-        background-color: #ccc;
       }
       .right{
-        height: 100px;
+        height: 10px;
         width:200px;
-        background-color: #cfc;
       }
       .center{
-        height: 100px;
-      }
-      .floatDiv .left{
-          float:left;
-      }
-      .floatDiv .right{
-          float:right;
+        height: 10px;
       }
     </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
-     
+      <div class="floatDiv">
+        <div class="left">left</div>
+        <div class="center">center</div>
+        <div class="right">right</div>
+      </div>
     </div>
   </body>
 </html>

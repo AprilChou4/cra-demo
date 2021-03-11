@@ -8,25 +8,22 @@ class Index extends React.Component {
      }
     }
     componentWillMount() {
+
         Promise.resolve().then(() => {
-            this.setState({
-                name:'111'
-            })
-            console.log('111111')
-        });  
-         this.setState({
-                name:'111'
-            })
-    }
         
-       
-    componentDidMount() {
-        // this.setState({
-        //     name:'2222'
-        // })
-        console.log('2222222')
+        console.log('111');
         
-    }
+        });
+        
+        }
+        
+        
+        
+        componentDidMount() {
+        
+        console.log('222');
+        
+        }
         
         
     
@@ -46,14 +43,11 @@ class Index extends React.Component {
       console.log('unMount--------')
   }
     render() {
-        const {list,name} =this.state;
+        const {list} =this.state;
         console.log(list,'-----list')
 
       return (
-        <div>
-            <ScrollingList list={list}/>
-            {name}
-        </div>
+        <ScrollingList list={list}/>
       );
     }
   }

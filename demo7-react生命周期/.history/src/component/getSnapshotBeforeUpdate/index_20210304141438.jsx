@@ -9,9 +9,9 @@ class Index extends React.Component {
     }
     componentWillMount() {
         Promise.resolve().then(() => {
-            this.setState({
-                name:'111'
-            })
+            // this.setState({
+            //     name:'111'
+            // })
             console.log('111111')
         });  
          this.setState({
